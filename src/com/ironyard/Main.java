@@ -2,6 +2,11 @@ package com.ironyard;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.HashMap;
+import java.util.Random;
 
 public class Main {
 
@@ -28,7 +33,32 @@ public class Main {
 		    tempTeach.setGrade(1);
 		    teachers.add(tempTeach);
         }
-        
+
+        Set<Student> set1 = new HashSet<>();
+		Set<Student> set2 = new HashSet<>();
+        Set<Student> set3 = new HashSet<>();
+
+        Student[] studentArray = new Student[students.size()];
+        studentArray = students.toArray(studentArray);
+
+        for (int i = 0; i < 5; i++) {
+            set1.add(studentArray[i]);
+            set2.add(studentArray[i+5]);
+            set3.add(studentArray[i+10]);
+        }
+
+        Map<Teacher, HashSet> classMap = new HashMap<>();
+
+        Teacher[] teacherArray = new Teacher[teachers.size()];
+        teacherArray = teachers.toArray(teacherArray);
+
+        classMap.put(teacherArray[0], (HashSet) set1);
+        classMap.put(teacherArray[1], (HashSet) set2);
+        classMap.put(teacherArray[2], (HashSet) set3);
+
+        System.out.println(classMap.keySet());
+        System.out.println(classMap.values());
+
     }
 
 
