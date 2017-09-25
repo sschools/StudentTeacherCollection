@@ -58,6 +58,7 @@ public class Main {
 
         System.out.println(classMap.keySet());
         System.out.println(classMap.values());
+        System.out.println(classMap.entrySet());
 
     }
 
