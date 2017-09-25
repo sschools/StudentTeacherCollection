@@ -17,5 +17,19 @@ public class Main {
 			temp.setGrade(1);
 			students.add(temp);
 		}
-	}
+        List<Teacher> teachers = new ArrayList<>();
+		String[] teachFirstNames = {"Rocky", "Apollo", "Clubber"};
+		String[] teachLastNames = {"Balboa", "Creed", "Lang"};
+		for (int i = 0; i < 3; i++) {
+		    Teacher tempTeach = new Teacher();
+		    tempTeach.setFirstName(teachFirstNames[i]);
+		    tempTeach.setLastName(teachLastNames[i]);
+		    tempTeach.setId(100 + i);
+		    tempTeach.setGrade(1);
+		    teachers.add(tempTeach);
+        }
+        
+    }
+
+
 }
